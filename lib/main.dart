@@ -1,3 +1,4 @@
+import 'package:designs/content.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomePage(),
+      home: ContentPage(),
     );
   }
 }
@@ -31,7 +32,7 @@ class HomePage extends StatelessWidget {
           backgroundColor: const Color.fromRGBO(40, 41, 62, 1),
         ),
         body: Container(
-          color: Color.fromRGBO(40, 41, 62, 1),
+          color: const Color.fromRGBO(40, 41, 62, 1),
           child: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.all(17.0),
@@ -99,7 +100,7 @@ class HomePage extends StatelessWidget {
                       ElevatedButton(
                           style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all(
-                                  Color.fromRGBO(239, 109, 88, 1))),
+                                  const Color.fromRGBO(239, 109, 88, 1))),
                           onPressed: () {},
                           child: const Text('How We Work')),
                       const Text(
@@ -150,11 +151,11 @@ class HomePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Container(
-                    color: Color.fromRGBO(253, 240, 233, 1),
+                    color: const Color.fromRGBO(253, 240, 233, 1),
                     child: Padding(
                       padding: const EdgeInsets.all(17.0),
                       child: Column(
@@ -167,7 +168,7 @@ class HomePage extends StatelessWidget {
                               Image.asset('assets/images/12.png'),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 25,
                           ),
                           Row(
@@ -177,13 +178,20 @@ class HomePage extends StatelessWidget {
                               Image.asset('assets/images/14.png'),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 30,
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 30.0),
                             child: Image.asset('assets/images/15.png'),
                           ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          const Divider(
+                            color: Colors.grey,
+                            thickness: 2.4,
+                          )
                         ],
                       ),
                     ),

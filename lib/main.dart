@@ -10,13 +10,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const HomePage(),
+    return const MaterialApp(
+      home: HomePage(),
     );
   }
 }
@@ -28,11 +23,76 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Agency'),
-        //leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
+        title: const Text('Agency'),
         actions: [
-          IconButton(onPressed: () {}, icon: (Icon(Icons.menu))),
+          IconButton(onPressed: () {}, icon: (const Icon(Icons.menu))),
         ],
+        backgroundColor: const Color.fromARGB(40, 41, 62, 1),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Image.asset(
+                    'assets/images/png.png',
+                    fit: BoxFit.cover,
+                    width: 350,
+                    height: 350,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text("Modern Studio"),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const Padding(
+              padding: EdgeInsets.all(15.0),
+              child: Center(
+                child: Text(
+                  'We’re Help To Build Your Dream Project',
+                  style: TextStyle(fontSize: 50),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const Padding(
+              padding: EdgeInsets.all(15.0),
+              child: Center(
+                child: Text(
+                  'Agency provides a full service range including technical skills, design, business understanding.',
+                  style: TextStyle(fontSize: 20, height: 1.5),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(onPressed: () {}, child: Text('How We Work')),
+                Text('Contact Us'),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

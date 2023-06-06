@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
 
-class ContentPage extends StatelessWidget {
+class ContentPage extends StatefulWidget {
   const ContentPage({super.key});
+
+  @override
+  State<ContentPage> createState() => _ContentPageState();
+}
+
+class _ContentPageState extends State<ContentPage> {
+  bool isHorizontal = true;
+
+  void positionalSet() {
+    setState(() {
+      isHorizontal = !isHorizontal;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -621,6 +634,191 @@ class ContentPage extends StatelessWidget {
                         ),
                       ),
                     ),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  ElevatedButton(
+                      onPressed: positionalSet, child: Text('Toggle View')),
+                  SizedBox(
+                    height: 200,
+                    child: Expanded(
+                        child: isHorizontal
+                            ? ListView(
+                                scrollDirection: Axis.horizontal,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      child: Container(
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(30),
+                                              color: Colors.white),
+                                          height: 300,
+                                          width: 300,
+                                          child: const Center(
+                                              child: Text('Card 1'))),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      child: SizedBox(
+                                        height: 300,
+                                        width: 300,
+                                        child: Container(
+                                            decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(30),
+                                                color: Colors.white),
+                                            height: 300,
+                                            width: 300,
+                                            child: const Center(
+                                                child: Text('Card 2'))),
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      child: SizedBox(
+                                        height: 300,
+                                        width: 300,
+                                        child: Container(
+                                            decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(30),
+                                                color: Colors.white),
+                                            height: 300,
+                                            width: 300,
+                                            child: const Center(
+                                                child: Text('Card 3'))),
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      child: Container(
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(30),
+                                              color: Colors.white),
+                                          height: 300,
+                                          width: 300,
+                                          child: const Center(
+                                              child: Text('Card 4'))),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      child: Container(
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(30),
+                                              color: Colors.white),
+                                          height: 300,
+                                          width: 300,
+                                          child: const Center(
+                                              child: Text('Card 5'))),
+                                    ),
+                                  ),
+                                ],
+                              )
+                            : ListView(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      child: Container(
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(30),
+                                              color: Colors.white),
+                                          height: 150,
+                                          width: 300,
+                                          child: const Center(
+                                              child: Text('Card 1'))),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      child: SizedBox(
+                                        height: 150,
+                                        width: 300,
+                                        child: Container(
+                                            decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(30),
+                                                color: Colors.white),
+                                            height: 300,
+                                            width: 300,
+                                            child: const Center(
+                                                child: Text('Card 2'))),
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      child: SizedBox(
+                                        height: 150,
+                                        width: 300,
+                                        child: Container(
+                                            decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(30),
+                                                color: Colors.white),
+                                            height: 300,
+                                            width: 300,
+                                            child: const Center(
+                                                child: Text('Card 3'))),
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      child: Container(
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(30),
+                                              color: Colors.white),
+                                          height: 150,
+                                          width: 300,
+                                          child: const Center(
+                                              child: Text('Card 4'))),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: InkWell(
+                                      onTap: () {},
+                                      child: Container(
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(30),
+                                              color: Colors.white),
+                                          height: 150,
+                                          width: 300,
+                                          child: const Center(
+                                              child: Text('Card 5'))),
+                                    ),
+                                  ),
+                                ],
+                              )),
                   ),
                 ],
               ),

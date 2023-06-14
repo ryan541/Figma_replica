@@ -1,4 +1,6 @@
+import 'package:designs/widgets/avatar.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ContentPage extends StatefulWidget {
   const ContentPage({super.key});
@@ -106,7 +108,9 @@ class _ContentPageState extends State<ContentPage> {
                           style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all(
                                   const Color.fromARGB(255, 255, 255, 255))),
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.toNamed('/');
+                          },
                           child: const Text(
                             'About Us',
                             style:
@@ -638,7 +642,7 @@ class _ContentPageState extends State<ContentPage> {
                   height: 30,
                 ),
                 ElevatedButton(
-                    onPressed: positionalSet, child: Text('Toggle View')),
+                    onPressed: positionalSet, child: const Text('Toggle View')),
                 SizedBox(
                   height: 200,
                   child: Expanded(
@@ -819,6 +823,366 @@ class _ContentPageState extends State<ContentPage> {
                               ],
                             )),
                 ),
+                const SizedBox(
+                  height: 15,
+                ),
+                SizedBox(
+                    height: 350,
+                    width: 350,
+                    child: Image.asset('assets/images/21.png')),
+                const SizedBox(
+                  height: 15,
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Service',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Color.fromRGBO(239, 109, 88, 1),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Expanded(
+                      child: Text(
+                        'Making Complex Digital Products',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 40,
+                          color: Color.fromRGBO(57, 20, 0, 1),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Text(
+                        'Agency provides a full service range including technical skills, design, business.',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 23),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        height: 70,
+                        width: 70,
+                        decoration: const BoxDecoration(
+                            color: Color.fromRGBO(247, 203, 71, 1),
+                            shape: BoxShape.circle),
+                        child: Image.asset(
+                          'assets/images/22.png',
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      const Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Expanded(
+                                  child: Text(
+                                    '"Understanding, ability to put themselves in the merchant\'s shoes. It is meant to partner."',
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        color: Color.fromRGBO(57, 20, 0, 0.64),
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 15,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Jenny Murtaugh',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.black),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        width: 150,
+                        height: 50,
+                        child: ElevatedButton(
+                            style: const ButtonStyle(
+                                elevation: MaterialStatePropertyAll(10),
+                                backgroundColor:
+                                    MaterialStatePropertyAll(Colors.white)),
+                            onPressed: () {},
+                            child: const Text(
+                              'Explore',
+                              style: TextStyle(
+                                  color: Color.fromRGBO(57, 20, 0, 1),
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w700),
+                            )),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 100,
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text('Service',
+                        style: TextStyle(
+                            color: Color.fromRGBO(239, 109, 88, 1),
+                            fontSize: 22)),
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Text(
+                  'How Our Agency Can Help',
+                  style: TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.w800,
+                      color: Color.fromRGBO(57, 20, 0, 1)),
+                ),
+                const SizedBox(
+                  height: 50,
+                ),
+                Container(
+                  height: 300,
+                  width: 500,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                        color: const Color.fromRGBO(243, 209, 191, 1),
+                        width: 2),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(30.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Avatar(
+                              imagePath: 'assets/images/22.png',
+                              radius: 30.90,
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text('Design',
+                                style: TextStyle(
+                                    color: Color.fromRGBO(57, 20, 0, 1),
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w500)),
+                          ],
+                        ),
+                        SizedBox(height: 20),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Expanded(
+                              child: Text(
+                                  'Agency provides a full service range including technical skills, design.',
+                                  style: TextStyle(
+                                      height: 1.9,
+                                      color: Color.fromRGBO(57, 20, 0, 0.64),
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w400)),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 20),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text('Learn More',
+                                style: TextStyle(
+                                    color: Color.fromRGBO(57, 20, 0, 1),
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w500)),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 300,
+                  width: 500,
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    border: Border.symmetric(
+                        vertical: BorderSide(
+                      color: Color.fromRGBO(239, 109, 88, 1),
+                    )),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(30.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Avatar(
+                              imagePath: 'assets/images/22.png',
+                              radius: 30.90,
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text('Development',
+                                style: TextStyle(
+                                    color: Color.fromRGBO(57, 20, 0, 1),
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w500)),
+                          ],
+                        ),
+                        SizedBox(height: 20),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Expanded(
+                              child: Text(
+                                  'Full service range including technical skills, design, business.',
+                                  style: TextStyle(
+                                      height: 1.9,
+                                      color: Color.fromRGBO(57, 20, 0, 0.64),
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w400)),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 20),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text('Discover More',
+                                style: TextStyle(
+                                    color: Color.fromRGBO(57, 20, 0, 1),
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w500)),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 300,
+                  width: 500,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                        color: const Color.fromRGBO(243, 209, 191, 1),
+                        width: 2),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(30.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Avatar(
+                              imagePath: 'assets/images/22.png',
+                              radius: 30.90,
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text('Marketing',
+                                style: TextStyle(
+                                    color: Color.fromRGBO(57, 20, 0, 1),
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w500)),
+                          ],
+                        ),
+                        SizedBox(height: 20),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Expanded(
+                              child: Text(
+                                  'Technical skills, design, business understanding, ability.',
+                                  style: TextStyle(
+                                      height: 1.9,
+                                      color: Color.fromRGBO(57, 20, 0, 0.64),
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w400)),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 20),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text('Explore More',
+                                style: TextStyle(
+                                    color: Color.fromRGBO(57, 20, 0, 1),
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w500)),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 150),
               ],
             ),
           ),

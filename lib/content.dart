@@ -1119,66 +1119,71 @@ class _ContentPageState extends State<ContentPage> {
                     ),
                   ),
                 ),
-                Container(
-                  height: 300,
-                  width: 500,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                        color: const Color.fromRGBO(243, 209, 191, 1),
-                        width: 2),
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.all(30.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Avatar(
-                              imagePath: 'assets/images/22.png',
-                              radius: 30.90,
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text('Marketing',
-                                style: TextStyle(
-                                    color: Color.fromRGBO(57, 20, 0, 1),
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.w500)),
-                          ],
-                        ),
-                        SizedBox(height: 20),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Expanded(
-                              child: Text(
-                                  'Technical skills, design, business understanding, ability.',
+                InkWell(
+                  onTap: () {
+                    Get.toNamed('/');
+                  },
+                  child: Container(
+                    height: 300,
+                    width: 500,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: const Color.fromRGBO(243, 209, 191, 1),
+                          width: 2),
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.all(30.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Avatar(
+                                imagePath: 'assets/images/22.png',
+                                radius: 30.90,
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 10),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text('Marketing',
                                   style: TextStyle(
-                                      height: 1.9,
-                                      color: Color.fromRGBO(57, 20, 0, 0.64),
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w400)),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 20),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text('Explore More',
-                                style: TextStyle(
-                                    color: Color.fromRGBO(57, 20, 0, 1),
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w500)),
-                          ],
-                        )
-                      ],
+                                      color: Color.fromRGBO(57, 20, 0, 1),
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.w500)),
+                            ],
+                          ),
+                          SizedBox(height: 20),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: Text(
+                                    'Technical skills, design, business understanding, ability.',
+                                    style: TextStyle(
+                                        height: 1.9,
+                                        color: Color.fromRGBO(57, 20, 0, 0.64),
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w400)),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 20),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text('Explore More',
+                                  style: TextStyle(
+                                      color: Color.fromRGBO(57, 20, 0, 1),
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w500)),
+                            ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
